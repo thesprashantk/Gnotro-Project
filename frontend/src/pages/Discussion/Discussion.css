@@ -1,0 +1,64 @@
+.discussion-feed-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.feed-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.feed-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.feed-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+.posts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.loading-state,
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-secondary);
+}
+
+.loading-state {
+  font-size: 1.1rem;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.empty-state {
+  background: var(--bg-secondary);
+  border-radius: var(--border-radius-lg);
+  border: 1px solid var(--border-color);
+}
+
+@media (max-width: 768px) {
+  .discussion-feed-page {
+    padding: 1rem 0.5rem;
+  }
+  
+  .feed-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .posts-list {
+    gap: 1.5rem;
+  }
+}

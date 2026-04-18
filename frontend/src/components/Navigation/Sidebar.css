@@ -1,0 +1,97 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+  width: 260px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 0;
+  border-left: none;
+  border-top: none;
+  border-bottom: none;
+  padding: 2rem 1.5rem;
+  z-index: 50;
+  background-color: var(--bg-primary);
+  border-right: 1px solid var(--border-color);
+}
+
+.sidebar-logo {
+  margin-bottom: 2.5rem;
+  padding-left: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.05em;
+}
+
+.sidebar-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  flex: 1;
+}
+
+.sidebar-link, .theme-toggle, .logout-btn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius-lg);
+  color: var(--text-primary);
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  text-decoration: none;
+  border: none;
+  background: transparent;
+  width: 100%;
+  cursor: pointer;
+  text-align: left;
+}
+
+.sidebar-link:hover, .theme-toggle:hover, .logout-btn:hover {
+  background-color: var(--bg-secondary);
+}
+
+.sidebar-link.active {
+  background-color: var(--bg-tertiary);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    height: 65px;
+    width: 100%;
+    top: auto;
+    bottom: 0;
+    flex-direction: row;
+    padding: 0;
+    border-right: none;
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 -4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+
+  .sidebar-logo, .link-text, .theme-toggle .link-text {
+    display: none;
+  }
+
+  .sidebar-links {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  .sidebar-link, .theme-toggle {
+    padding: 10px;
+    border-radius: var(--border-radius-full);
+    width: auto;
+    justify-content: center;
+  }
+
+  .sidebar-bottom {
+    display: none; /* Hide theme toggle on mobile bottom bar to save space, or put in profile */
+  }
+}

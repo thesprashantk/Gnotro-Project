@@ -1,0 +1,181 @@
+.explore-page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+/* Header with Explore title and clear button parallel */
+.explore-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.explore-header-top h2 {
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.clear-history-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--bg-secondary);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.clear-history-btn:hover:not(:disabled) {
+  background-color: #ef4444;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.clear-history-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Slim search bar with icon outside */
+.explore-search-container {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-icon-outside {
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.search-icon-outside:hover {
+  color: var(--text-primary);
+}
+
+.explore-search-input-slim {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-full);
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  outline: none;
+  transition: all var(--transition-fast);
+}
+
+.explore-search-input-slim:focus {
+  border-color: var(--text-primary);
+  box-shadow: 0 0 0 2px rgba(var(--text-primary-rgb), 0.1);
+}
+
+.explore-search-input-slim::placeholder {
+  color: var(--text-tertiary);
+}
+
+/* Section titles */
+.section-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1.5rem 0 1rem 0;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+/* Search results section */
+.search-results-section,
+.last-searches-section {
+  margin-top: 1rem;
+}
+
+/* Empty search state */
+.search-empty {
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius-lg);
+  color: var(--text-tertiary);
+}
+
+.history-empty {
+  padding: 2rem;
+  border-radius: var(--border-radius-lg);
+  background-color: var(--bg-secondary);
+  color: var(--text-tertiary);
+  text-align: center;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.history-item {
+  padding: 1rem 1.25rem;
+  border-radius: var(--border-radius-lg);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.history-item:hover {
+  border-color: var(--text-primary);
+  background-color: var(--bg-tertiary);
+  transform: translateX(0.25rem);
+}
+
+.history-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.history-query {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.history-tag {
+  color: var(--text-tertiary);
+  font-size: 0.85rem;
+  white-space: nowrap;
+  background-color: var(--bg-primary);
+  padding: 0.25rem 0.625rem;
+  border-radius: var(--border-radius-full);
+  display: inline-block;
+}
+
+.history-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  color: var(--text-tertiary);
+  font-size: 0.85rem;
+}
+
+.history-post-title {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.history-time {
+  font-size: 0.75rem;
+}
